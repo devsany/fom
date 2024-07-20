@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import Input from "./Input";
 
 const App = () => {
+  const data = useRef();
   const [step, setStep] = useState(1);
 
   const [formData, setFormData] = useState({
@@ -127,6 +129,7 @@ const App = () => {
         {step === 4 && <div>login completed</div>}
         <button type="submit"> Next</button>
       </form>
+      <Input />
     </div>
   );
 };
